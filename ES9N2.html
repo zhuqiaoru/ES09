@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1={a:5},num2={a:3},num3={a:2};
+        let calc=new WeakMap([[num1,a=>a*3],[num2,a=>a**3]]);
+        let getValue=num=>{
+            if(calc.has(num)){
+                let map=calc.get(num);
+                console.log(num,'映射为',map,'计算结果为',map(num.a));
+            }
+            else
+                console.log(num,'映射不存在');
+        }
+        getValue(num1);
+        getValue(num2);
+        getValue(num3);
+    </script>
+</body>
+</html>

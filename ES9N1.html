@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mobilePhone =new Map([['华为P40','5G'],['荣耀30S','4G'],['Redmi K30','5G']]);
+        console.log('修改荣耀30S手机为5G');
+        mobilePhone.set('荣耀30S','5G');
+        console.log('添加iPhone11、4G手机');
+        mobilePhone.set('iPhone11','4G');
+        console.log('结果如下');
+        for(let[brand,generation] of mobilePhone){
+           
+            console.log(brand,generation);
+        }
+
+    </script>
+</body>
+</html>
